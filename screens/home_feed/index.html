@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131314;color:#e5e2e3;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#2ae500", "primary": "#efffe3", "error-container": "#93000a", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#095300", "on-tertiary-container": "#7a5955", "secondary-container": "#47464b", "outline": "#85967c", "on-secondary-fixed": "#1b1b1f", "surface-container-low": "#1c1b1c", "on-background": "#e5e2e3", "surface-container-highest": "#353436", "on-tertiary-fixed-variant": "#5d3f3c", "inverse-on-surface": "#313031", "surface-bright": "#3a393a", "inverse-surface": "#e5e2e3", "on-secondary-fixed-variant": "#47464b", "on-secondary": "#303034", "outline-variant": "#3c4b35", "tertiary-fixed": "#ffdad6", "tertiary-container": "#ffd3ce", "primary-fixed": "#79ff5b", "on-surface": "#e5e2e3", "on-surface-variant": "#baccb0", "surface-container-high": "#2a2a2b", "on-primary-fixed": "#022100", "tertiary-fixed-dim": "#e7bdb8", "on-primary-container": "#107100", "on-primary": "#053900", "on-tertiary-fixed": "#2c1513", "on-secondary-container": "#b6b4b9", "surface-dim": "#131314", "tertiary": "#fff8f7", "background": "#131314", "surface-container-lowest": "#0e0e0f", "secondary-fixed": "#e4e1e7", "on-error": "#690005", "on-tertiary": "#442927", "secondary": "#c8c5cb", "surface-tint": "#2ae500", "surface-variant": "#353436", "surface": "#131314", "surface-container": "#201f20", "error": "#ffb4ab", "primary-container": "#39ff14", "secondary-fixed-dim": "#c8c5cb", "inverse-primary": "#106e00" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xl": "2rem", "gutter-mobile": "0.75rem", "gutter": "1rem", "margin": "1.25rem" }, fontFamily: { "label-sm": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "label-md": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "display-lg": ["Inter"] }, fontSize: { "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-lg": ["28px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "-0.01em", fontWeight: "500" }], "label-lg": ["14px", { lineHeight: "18px", letterSpacing: "-0.02em", fontWeight: "500" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "600" }], "display-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Bitstream Icon Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VSrJABB2iocbLm4ICDUEOFXEpz3TvPeepgplZQjFdV6hgnvUZvZi-oypxKJRxXMN6N-_c1G9jOZRq4gXvFqaB4VAeIwk6MlFe8nTJSRWJ9q7heIaepoW5jCkVQoYtwAWQtHP5y2rDnA3p6AcpCdpTWV551jLA1Ulx-jihSA0KL_OPHGd2ka7s2CIaP_XlqbDJhWjoM5ZkED6480MFfIdZTMUA1pk8k9UC_EnW7XRii"/><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">Bitstream<span class="text-primary-container">.fm</span></span><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container shadow-[0_0_8px_#39ff14]"></span></span></div><span class="px-1.5 py-0.5 rounded-full bg-primary-container/10 text-primary-container font-label-sm text-label-sm uppercase tracking-wider">DEMO</span></div><div class="flex items-center gap-space-sm"><span class="hidden">Home</span><a aria-label="Settings" class="w-11 h-11 flex items-center justify-center rounded-full text-secondary hover:text-primary-container transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-2xl">settings</span></a><a aria-label="Profile" class="w-11 h-11 flex items-center justify-center rounded-full transition-transform active:scale-95" data-path="library" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWp2o29NN7IQnNj5YY6Df8k3iDpvZy_J6VoMqhNgrYrVod0MkOkDMGUm9aK1Vrxot7FTD9CQdtteu6M6FwUWVKCVC9xMnoO9YsYe5bXKCsW-ikX5S3HM3IWFRkCXs_saSJRTbscsLgWv2czc30iGl87VH6nnzxadslTgCSTHwsCjkB2jP0mOnKzGjd9tbVyOqI2ZXnUajuhaSTHU-YEKFJViVHELsd3OpMDC7oAnc"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface min-h-screen"><div class="flex flex-col w-full pb-20">
+<!-- Ticker Banner -->
+<div class="w-full bg-surface-container-lowest overflow-hidden py-2 px-margin border-none">
+<div class="flex items-center gap-3 animate-pulse">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_8px_#39ff14] shrink-0"></span>
+<p class="font-label-sm text-label-sm text-primary-container tracking-wider uppercase truncate">
+        BITSTREAM NETWORK • ZERO FILLER. ALL VALUE. [DEMO BUILD v2.4]
+      </p>
+</div>
+</div>
+<div class="px-margin flex flex-col gap-space-lg mt-space-md">
+<!-- Featured 'Continue Listening' Card -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary-container">sync</span>
+          RESUME AUDIO STREAM
+        </span>
+<span class="font-label-sm text-label-sm text-primary-container bg-surface-container px-2 py-0.5 rounded-full">
+          64% PLAYED
+        </span>
+</div>
+<div class="relative w-full rounded-xl bg-surface-container-low p-4 shadow-[0_0_24px_rgba(57,255,20,0.12)] overflow-hidden">
+<!-- Subtle Glow Layer -->
+<div class="absolute -top-12 -right-12 w-40 h-40 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col gap-3 relative z-10">
+<div class="flex items-start justify-between gap-3">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 mb-1 flex-wrap">
+<span class="bg-primary-container/10 text-primary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded uppercase">
+                  DEMO
+                </span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded uppercase">
+                  Hourly Drop #142 • LIVE DEMO
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate">
+                W For News in the Chat
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-0.5">
+                Trump's Nobel Pitch, Paxton Leaked Audio, Hurricane Isaias update with fast streamer pacing.
+              </p>
+</div>
+<div class="w-14 h-14 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A neon lit podcast studio desk featuring a professional microphone glowing with intense green audio telemetry, ultra high contrast dark cyber aesthetic with obsidian backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIoMCULYTwVjSi5JGFYklvO6bEMW99BQ5i4NRCz1tQPMSfjtuFjxkkVH1A6ROmHORKPZKLW05lKgqYk_jA71B1bQyvI5F6HKecj-NAYWYvS_JRBSL6MOj_C3p4amaU5t7AOVSqW6pNBZaVhZtIzjduyXV0ccSjPfTAzYBo-SeQIMJ_guKPxxkr9h9yAH7aTgu7quuOg0J_9MWyqVaVeCp7SaKGG9_sSrzOyhHrR8o"/>
+<div class="absolute inset-0 bg-primary-container/10 mix-blend-screen"></div>
+</div>
+</div>
+<!-- Live Visualizer Equalizer -->
+<div class="bg-surface-container-lowest/80 rounded-lg p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined text-xs animate-spin">graphic_eq</span>
+                HIGH-FREQ SYNC
+              </span>
+<span class="text-on-surface">3:18 / 5:12</span>
+</div>
+<!-- Waveform Interactive Scrubber Graphic -->
+<div class="flex items-center gap-0.5 h-7 w-full cursor-pointer py-1" id="waveform-scrubber">
+<div class="h-3 w-1 bg-primary-container rounded-full"></div>
+<div class="h-5 w-1 bg-primary-container rounded-full"></div>
+<div class="h-7 w-1 bg-primary-container rounded-full"></div>
+<div class="h-4 w-1 bg-primary-container rounded-full"></div>
+<div class="h-6 w-1 bg-primary-container rounded-full"></div>
+<div class="h-5 w-1 bg-primary-container rounded-full"></div>
+<div class="h-7 w-1 bg-primary-container rounded-full"></div>
+<div class="h-3 w-1 bg-primary-container rounded-full"></div>
+<div class="h-6 w-1 bg-primary-container rounded-full"></div>
+<div class="h-5 w-1 bg-primary-container rounded-full"></div>
+<div class="h-4 w-1 bg-primary-container rounded-full"></div>
+<div class="h-7 w-1 bg-primary-container rounded-full"></div>
+<div class="h-3 w-1 bg-primary-container rounded-full"></div>
+<div class="h-5 w-1 bg-primary-container rounded-full"></div>
+<div class="h-6 w-1 bg-primary-container rounded-full"></div>
+<!-- Played vs unplayed threshold -->
+<div class="h-7 w-1.5 bg-primary rounded-full shadow-[0_0_8px_#39ff14]"></div>
+<div class="h-4 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-6 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-3 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-5 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-7 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-4 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-6 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-3 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-5 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-4 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-6 w-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-2 w-1 bg-surface-container-highest rounded-full"></div>
+</div>
+<!-- Controls Row -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-3">
+<button aria-label="Rewind 15 seconds" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-base">replay_10</span>
+</button>
+<button aria-label="Fast forward 15 seconds" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-base">apps</span>
+</button>
+<span class="font-label-sm text-label-sm text-primary-container">1.2x SPEED</span>
+</div>
+<button aria-label="Resume Episode" class="flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary-fixed shadow-[0_0_12px_#39ff14] hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Network Shows Rail -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-2">
+<span>Network Shows</span>
+<span class="bg-primary-container/20 text-primary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded uppercase">6 ACTIVE</span>
+</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">FLUID SYNDICATE</span>
+</div>
+<!-- Horizontal Scrollable Container -->
+<div class="flex gap-3 overflow-x-auto pb-2 -mx-margin px-margin scrollbar-none snap-x snap-mandatory">
+<!-- Show 1 -->
+<div class="snap-start shrink-0 w-44 rounded-xl bg-surface-container-low p-3 flex flex-col justify-between gap-3 shadow-sm hover:shadow-[0_0_16px_rgba(57,255,20,0.15)] transition-all">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High energy cyber Twitch streamer setup with chat overlays and electric green lights illuminating modern hardware gear, vibrant dark contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKg7Zb45T1FSU3dSinHUadVI-6Vl-1NfWsKCP4p0kbeKjk4dHuxQzMEje54orGW3oPaAL7jCKxNbY6tpMvN2UMOK8c43jymgIF37P37R8Qg0rNe4qL4U6aiuGPnmizBpx3VY8inzUO7_0tVcPATXH3vAXLHhZJMb9tQ12QDPo0UgiHshgDrGq7Jqnct31S6HhxRuk1wdtjGU_yBVhdFFK0sd43ygZmcYXEnlZO85I"/>
+<div class="absolute top-1.5 left-1.5 bg-error-container text-on-error-container px-1 py-0.5 rounded font-label-sm text-label-sm font-bold">
+              STREAM
+            </div>
+<div class="absolute bottom-1.5 right-1.5 bg-surface-container-lowest/90 text-primary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded">
+              ~5m HOURLY
+            </div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary-container uppercase truncate">FAST BREAK</span>
+<h4 class="font-headline-sm text-sm font-bold text-on-surface truncate">W For News</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Streamer-style recap</span>
+</div>
+</div>
+<!-- Show 2 -->
+<div class="snap-start shrink-0 w-44 rounded-xl bg-surface-container-low p-3 flex flex-col justify-between gap-3 shadow-sm hover:shadow-[0_0_16px_rgba(57,255,20,0.15)] transition-all">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Futuristic silicon wafer macro photograph with glowing emerald laser circuit traces on obsidian carbon substrate, clean tech typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBScR6joMgnHU6NonOTELoq4o2bJr907xfANX6hpFJaWq6inAKkuMA8W3WNCx-1I3ljKzObuGUoFdVUTFEtktvUmC1YNYOp3Mb_BwsBfV5m-Kia1IGTNtE-AcXEb1n-d1aMplLsjJ414fg1jK7S6_DJQgNvyMB7FLxoq-6HUVTJRwMSlTLEc9OjiX5W0pOLxS_cU1zt4cHh9iGMpxqZVmjxGETSb6RtP_O8pEUODNM"/>
+<div class="absolute top-1.5 left-1.5 bg-surface-container-highest text-primary-container px-1 py-0.5 rounded font-label-sm text-label-sm">
+              DAILY TECH
+            </div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary-container uppercase truncate">FLAGSHIP</span>
+<h4 class="font-headline-sm text-sm font-bold text-on-surface truncate">Bitstream</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Deep engineering feeds</span>
+</div>
+</div>
+<!-- Show 3 -->
+<div class="snap-start shrink-0 w-44 rounded-xl bg-surface-container-low p-3 flex flex-col justify-between gap-3 shadow-sm hover:shadow-[0_0_16px_rgba(57,255,20,0.15)] transition-all">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Synthetic neural brain matrix floating in dark space illuminated by sharp neon green electrical synapses, mathematical typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3hfwKcu2w7oNSEwLnXuZ3TCyEKRZMRphB0UU4ctqmkCGv8lDJpLut9fo1qPtrz-Y87XiYJpyMgAQlXvfkO6XzxFGLKV6PmeyNxcdludh2xuTz1PahnwsuNbnCx5OEm0mRRks24ktm5o7p4GL4iFRQTRBlBAUDCI5s6qC9iqz9KCF1-3lt9CINoY8XNadpt9Kqv0-7L8njN46cuZQsporndQbwM0u0Hxx-4310i58"/>
+<div class="absolute top-1.5 left-1.5 bg-surface-container-highest text-on-surface px-1 py-0.5 rounded font-label-sm text-label-sm">
+              DAILY AI
+            </div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary-container uppercase truncate">DISPATCH</span>
+<h4 class="font-headline-sm text-sm font-bold text-on-surface truncate">Everyday AI</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Frontier research briefed</span>
+</div>
+</div>
+<!-- Show 4 -->
+<div class="snap-start shrink-0 w-44 rounded-xl bg-surface-container-low p-3 flex flex-col justify-between gap-3 shadow-sm hover:shadow-[0_0_16px_rgba(57,255,20,0.15)] transition-all">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Stock market electronic candlestick board pulsing with green financial vectors and algorithms in high resolution dark environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBykyaueb1quK30GHYw-F9dC3GhBPYcAHF9MbjboLnVO-gigoaypI4hFx3qGSIOGjlcNsrAhT00uEwnpss0J5GmaEwkQPy05Z308FUk85KPfynBIAHKEOO0YO38RkFbdLG9cLwGsTbt-CVvhGKU5LUZapvioW5IAlQJUgZFHg164f4RiCL_YnmnxR26oFpL0ZrVxjY1Cl0LliADapLtisTK9G395S8sd3cyjOy2--Q"/>
+<div class="absolute top-1.5 left-1.5 bg-surface-container-highest text-primary-container px-1 py-0.5 rounded font-label-sm text-label-sm">
+              BIZ &amp; VENTURE
+            </div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary-container uppercase truncate">MARKETS</span>
+<h4 class="font-headline-sm text-sm font-bold text-on-surface truncate">AI Money</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Venture deals &amp; moats</span>
+</div>
+</div>
+<!-- Show 5 -->
+<div class="snap-start shrink-0 w-44 rounded-xl bg-surface-container-low p-3 flex flex-col justify-between gap-3 shadow-sm hover:shadow-[0_0_16px_rgba(57,255,20,0.15)] transition-all">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Vintage urban boombox and sound system console in a neon-lit dim recording studio with green LED level indicators and dark textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwUKst22IkBbj6f0PaIxB9QCRs_5o9ROrtXYLf0rK0GObJiU_tXu8rBBNFCOw7cN228QV0iQd7Gw1y4bkmutXZaUZdoMMq8rDj6GqZQixsE87yDokccwes4Au247lzKFgnKwTyvLAbDUeLCFpsYl5mfMZHInLzQ7LKK7HjdAAjpNt4Rwjx7DgHNMCmXwCEmeXcSK1mbV6p_Gtb88tdHWZWIYq37keW3o_GcFnziK0"/>
+<div class="absolute top-1.5 left-1.5 bg-surface-container-highest text-on-surface px-1 py-0.5 rounded font-label-sm text-label-sm">
+              CULTURE
+            </div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary-container uppercase truncate">WEEKDAY</span>
+<h4 class="font-headline-sm text-sm font-bold text-on-surface truncate">Bar Exam</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Hip-hop industry &amp; battles</span>
+</div>
+</div>
+<!-- Show 6 -->
+<div class="snap-start shrink-0 w-44 rounded-xl bg-surface-container-low p-3 flex flex-col justify-between gap-3 shadow-sm hover:shadow-[0_0_16px_rgba(57,255,20,0.15)] transition-all">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Decentralized network nodes visualised as floating green geometric shards in hyper deep space with blockchain data streams." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpis9rAtnRxKL4EQIgKE-dl_QaA5CbMFrAFbxuT9_SJXS75PnTTqwMUhKTgpEt7XnwwnRtIZw_TtN0Umv7UgvzKEQl61Hs1UZ82LPWIaMQJAeUshzubz-j6e6HdcrnjTTsTXUET3Ui-eLLRrz8bz79I-qm9gq9-bv1ilkjzeFTx7YZCoZGWKd_YUQrJmd5rFmJYbPFPA1HEIBmIz7w4xkNTKjHdBbK2jocXyI5pBc"/>
+<div class="absolute top-1.5 left-1.5 bg-surface-container-highest text-primary-container px-1 py-0.5 rounded font-label-sm text-label-sm">
+              3X DAILY
+            </div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary-container uppercase truncate">CRYPTO</span>
+<h4 class="font-headline-sm text-sm font-bold text-on-surface truncate">Block by Block</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">On-chain forensics</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Episodes Vertical List -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-2">
+<span>Latest Drops</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">RECENT 24H</span>
+</h2>
+<button class="font-label-sm text-label-sm text-primary-container flex items-center hover:underline">
+          FILTER CHANNELS
+          <span class="material-symbols-outlined text-sm ml-0.5">tune</span>
+</button>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Episode 1 -->
+<div class="w-full rounded-xl bg-surface-container-low p-3 flex items-center justify-between gap-3 shadow-sm hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Minimalist glowing geometric neon icon showing dynamic venture funds in algorithmic trade graphs, obsidian background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDivHX8xKxxVTdX9R02aj4gTHbYx552Ml2UiYRu-4_hSyeZuQySh3_gXOowy883Ta1s1Gz8Zv8r9E8ZDYrD3vPd7QJxgynLx7xe0kjyF78cUnvFtmgSbuSCzuOIauCvAZLzZIxHDlCHS2_W5D4Zp-JRzlety6pReoxDdbVkXqqBd6Owa3zlWZSJsuHB2OGOtGpwlfsTVtIx-a5pFcekHRcZfNRCgDY6Lny1jeQi2Zs"/>
+<div class="absolute inset-0 bg-primary-container/20 group-hover:opacity-0 transition-opacity"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary-container uppercase">AI Money</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 24m ago</span>
+<span class="bg-primary-container/10 text-primary-container font-label-sm text-[9px] px-1 rounded">DEMO</span>
+</div>
+<h4 class="font-body-lg text-sm font-semibold text-on-surface truncate">
+                AI Agents That Actually Make Money
+              </h4>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>18m 42s</span>
+<span>• 320kbps OPUS</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Download episode offline" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+<button aria-label="Play AI Agents episode" class="w-9 h-9 rounded-full bg-surface-container-highest text-primary-container flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-all">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Episode 2 -->
+<div class="w-full rounded-xl bg-surface-container-low p-3 flex items-center justify-between gap-3 shadow-sm hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Apple Silicon macro circuit die with neon green data paths against black carbon fiber background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuJFgMSya-xCc7haGlnYGfM3r-l6AwW6y7xjYMQxk7D0ukK7IwuWTKZtiHDqqDbbvCQfnGMT232CrdwA9OqB38527rx6tpfXdPGx-t5vAnOZ6tpMCtXj46qpmWleQRwkBDc6jKc26x9F4BaJ2Op32SfDYenAkrLQMMBIX6uanEC-_AGUsYdun-0kQa-ZUbndkmnSEdxbM1myyFbk5j7lkOVGHUzlUkZeIdiqKcmnc"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary-container uppercase">Bitstream</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 1h ago</span>
+<span class="bg-primary-container/10 text-primary-container font-label-sm text-[9px] px-1 rounded">DEMO</span>
+</div>
+<h4 class="font-body-lg text-sm font-semibold text-on-surface truncate">
+                OpenAI Frontier Redux &amp; Apple Silicon Shifts
+              </h4>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>24m 10s</span>
+<span>• FLAC STEREO</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Download episode offline" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+<button aria-label="Play Bitstream episode" class="w-9 h-9 rounded-full bg-surface-container-highest text-primary-container flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-all">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Episode 3 -->
+<div class="w-full rounded-xl bg-surface-container-low p-3 flex items-center justify-between gap-3 shadow-sm hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Classic microphone sound booth in deep shadows with green light reflecting off metallic recording soundboards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Hc_j32IDCgTXsgrLblp0OfTke3GpMMdUmUR-o6lZ4y8EXdZcvgEv4g1zGW3aZWHjmRcH9JtA7KoWhPd01Ruf5y-Rk6yQZSsFHPEwl6yH2dztcpAiioAnPZ6GfHHF8lAayPjL56WIQgwf2GB0U89c6NJD8iFwsOOAPH9I02bQ1vMtSsstRXTOhpqC6mtQXIs4kEhprjHsaYS9qqRvlUQwxM9qxYr1kZ3sPO5wFeM"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary-container uppercase">Bar Exam</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 3h ago</span>
+<span class="bg-primary-container/10 text-primary-container font-label-sm text-[9px] px-1 rounded">DEMO</span>
+</div>
+<h4 class="font-body-lg text-sm font-semibold text-on-surface truncate">
+                Drake, Kendrick &amp; The New Streaming Splits
+              </h4>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>31m 05s</span>
+<span>• HQ AUDIO</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Download episode offline" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+<button aria-label="Play Bar Exam episode" class="w-9 h-9 rounded-full bg-surface-container-highest text-primary-container flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-all">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Episode 4 -->
+<div class="w-full rounded-xl bg-surface-container-low p-3 flex items-center justify-between gap-3 shadow-sm hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="High tech terminal screens showing crypto liquidity graphs with electric green indicators on pitch black displays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC6xx2uAkMdQqnsNGLzalmLmG2lMIR5fWIYig-HQ4aM7UNgza6fEEdloMEIiABzsl2d_Cf7zZdMg0P_SwSdAZl6qG2hzwlmqQdPXRS35AlsMImtWYmVG3WfmoLFubtjykC1rPr8fv04l4GWiJqo23pLTMVaZ4wcRKUhusMZZ-TGZQZqnyG5qgw3pqom4bB3X7SBInDrV4GvbRz0mnPKcy291duiC5H6FTAGBNA96k"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary-container uppercase">Block by Block</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 4h ago</span>
+<span class="bg-primary-container/10 text-primary-container font-label-sm text-[9px] px-1 rounded">DEMO</span>
+</div>
+<h4 class="font-body-lg text-sm font-semibold text-on-surface truncate">
+                Solana Breakpoint Alpha &amp; L2 Gas Drops
+              </h4>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>12m 18s</span>
+<span>• FAST DIGEST</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Download episode offline" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+<button aria-label="Play Block by Block episode" class="w-9 h-9 rounded-full bg-surface-container-highest text-primary-container flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-all">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Episode 5 -->
+<div class="w-full rounded-xl bg-surface-container-low p-3 flex items-center justify-between gap-3 shadow-sm hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Lines of source code glowing emerald green with automated cursor tokens in an ultra dark hacker IDE environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnK8oMKF50rffiqaFnOdt7Rt8JTQ1DI4Z2fSOFx5ffv-sIVOisf6q6Mw4K9zNgh4KBfznkebr2Qfc-J9iISxeJ0W1aCN-GDdJ-sc3LK73ZYkFPaps103NNOpW6GpjyG1FEfehzFZ0VpVPIylPjLRzv8sLiH2C36rqoUEKEtURE8swK5B5zBSkNqpeXwLClKLznmNWHorelvHyMfDTgSZcNLyPeZwSlBykMdzCHL5Q"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary-container uppercase">Everyday AI</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 6h ago</span>
+<span class="bg-primary-container/10 text-primary-container font-label-sm text-[9px] px-1 rounded">DEMO</span>
+</div>
+<h4 class="font-body-lg text-sm font-semibold text-on-surface truncate">
+                Autonomous Coding Models Ranked
+              </h4>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>16m 45s</span>
+<span>• CODE TELEMETRY</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Download episode offline" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+<button aria-label="Play Everyday AI episode" class="w-9 h-9 rounded-full bg-surface-container-highest text-primary-container flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-all">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Persistent Docked Mini-Player Overlay -->
+<aside class="fixed bottom-16 left-0 right-0 z-40 px-3 pb-2 pointer-events-none">
+<div class="pointer-events-auto max-w-lg mx-auto bg-surface-container-low/95 backdrop-blur-xl rounded-xl p-2.5 shadow-[0_4px_24px_rgba(0,0,0,0.8)] border-none flex items-center justify-between gap-3 relative overflow-hidden">
+<!-- Ambient Glow Behind Player -->
+<div class="absolute inset-x-0 bottom-0 h-0.5 bg-surface-container-highest">
+<div class="h-full bg-primary-container w-[64%] shadow-[0_0_8px_#39ff14]"></div>
+</div>
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="relative w-10 h-10 rounded-lg bg-surface-container-high shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Micro thumbnail of microphone with green live LED indicators on black obsidian studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUH1Wlxqfay0g61HViITSIZrrmUnRomyajYa89HVOdvgiSY1VFvHsWGGiPOwR12kjzeeOkcUGfCfc12LRFOlOBdSQOheZ1O5nWWeSZqRVaqXTSY3Yp5DqTqdn9QGCOo-E0yHfvfQidUkI4zOMFjhNZYB3lmYzZJj8_L2nC5hZ4rp2cy2NWcR2sjoCxVQgdnDOnq9kDHuOfzn0ycXDwSlLHgnMB1ppcWiPQZsl6oVQ"/>
+<div class="absolute inset-0 bg-primary-container/20 animate-pulse"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-[9px] text-primary-container uppercase tracking-wider truncate">W FOR NEWS #142</span>
+<span class="inline-block w-1 h-1 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-[9px] text-on-surface-variant uppercase">DEMO</span>
+</div>
+<span class="font-headline-sm text-xs font-semibold text-on-surface truncate">
+            Trump's Nobel Pitch, Paxton Leaked Audio
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button aria-label="Add bookmark note" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-lg">bookmark_add</span>
+</button>
+<button aria-label="Toggle playback" class="w-9 h-9 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center shadow-[0_0_12px_#39ff14] active:scale-90 transition-transform" id="mini-player-toggle">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Interactive script for waveform delight & player toggle -->
+<script>
+    (() => {
+      const toggleBtn = document.getElementById('mini-player-toggle');
+      if (toggleBtn) {
+        let isPlaying = true;
+        toggleBtn.addEventListener('click', () => {
+          isPlaying = !isPlaying;
+          const icon = toggleBtn.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.textContent = isPlaying ? 'pause' : 'play_arrow';
+          }
+        });
+      }
+
+      const scrubber = document.getElementById('waveform-scrubber');
+      if (scrubber) {
+        scrubber.addEventListener('click', (e) => {
+          const rect = scrubber.getBoundingClientRect();
+          const clickX = e.clientX - rect.left;
+          const ratio = Math.max(0, Math.min(1, clickX / rect.width));
+          const bars = scrubber.querySelectorAll('div');
+          const activeCount = Math.floor(bars.length * ratio);
+
+          bars.forEach((bar, idx) => {
+            if (idx <= activeCount) {
+              bar.className = 'h-' + (idx % 4 + 3) + ' w-1 bg-primary-container rounded-full';
+            } else {
+              bar.className = 'h-' + (idx % 4 + 3) + ' w-1 bg-surface-container-highest rounded-full';
+            }
+          });
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-2xl shadow-[0_-2px_16px_rgba(0,0,0,0.6)]" data-active-classes="text-primary-container [&amp;_.nav-indicator]:opacity-100 [&amp;_.nav-indicator]:scale-100"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 transition-colors text-primary-container [&amp;_.nav-indicator]:opacity-100 [&amp;_.nav-indicator]:scale-100" data-path="home" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">home</span><span class="font-label-sm text-label-sm mt-0.5">Home</span><span class="nav-indicator absolute bottom-0.5 w-1 h-1 rounded-full bg-primary-container opacity-0 scale-50 transition-all shadow-[0_0_6px_#39ff14]"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-primary transition-colors" data-path="discover" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">explore</span><span class="font-label-sm text-label-sm mt-0.5">Discover</span><span class="nav-indicator absolute bottom-0.5 w-1 h-1 rounded-full bg-primary-container opacity-0 scale-50 transition-all shadow-[0_0_6px_#39ff14]"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-primary transition-colors" data-path="clips" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">movie</span><span class="absolute -top-1 -right-3.5 px-1 py-0.2 rounded-full bg-primary-container text-on-primary-fixed font-label-sm text-[8px] leading-none uppercase font-bold">NEW</span></div><span class="font-label-sm text-label-sm mt-0.5">Clips</span><span class="nav-indicator absolute bottom-0.5 w-1 h-1 rounded-full bg-primary-container opacity-0 scale-50 transition-all shadow-[0_0_6px_#39ff14]"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-primary transition-colors" data-path="library" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">video_library</span><span class="font-label-sm text-label-sm mt-0.5">Library</span><span class="nav-indicator absolute bottom-0.5 w-1 h-1 rounded-full bg-primary-container opacity-0 scale-50 transition-all shadow-[0_0_6px_#39ff14]"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-primary transition-colors" data-path="shop" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">shopping_bag</span><span class="font-label-sm text-label-sm mt-0.5">Shop</span><span class="nav-indicator absolute bottom-0.5 w-1 h-1 rounded-full bg-primary-container opacity-0 scale-50 transition-all shadow-[0_0_6px_#39ff14]"></span></a></div></nav></body></html>
