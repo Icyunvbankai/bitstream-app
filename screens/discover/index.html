@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131314;color:#e5e2e3;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#2ae500", "primary": "#efffe3", "error-container": "#93000a", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#095300", "on-tertiary-container": "#7a5955", "secondary-container": "#47464b", "outline": "#85967c", "on-secondary-fixed": "#1b1b1f", "surface-container-low": "#1c1b1c", "on-background": "#e5e2e3", "surface-container-highest": "#353436", "on-tertiary-fixed-variant": "#5d3f3c", "inverse-on-surface": "#313031", "surface-bright": "#3a393a", "inverse-surface": "#e5e2e3", "on-secondary-fixed-variant": "#47464b", "on-secondary": "#303034", "outline-variant": "#3c4b35", "tertiary-fixed": "#ffdad6", "tertiary-container": "#ffd3ce", "primary-fixed": "#79ff5b", "on-surface": "#e5e2e3", "on-surface-variant": "#baccb0", "surface-container-high": "#2a2a2b", "on-primary-fixed": "#022100", "tertiary-fixed-dim": "#e7bdb8", "on-primary-container": "#107100", "on-primary": "#053900", "on-tertiary-fixed": "#2c1513", "on-secondary-container": "#b6b4b9", "surface-dim": "#131314", "tertiary": "#fff8f7", "background": "#131314", "surface-container-lowest": "#0e0e0f", "secondary-fixed": "#e4e1e7", "on-error": "#690005", "on-tertiary": "#442927", "secondary": "#c8c5cb", "surface-tint": "#2ae500", "surface-variant": "#353436", "surface": "#131314", "surface-container": "#201f20", "error": "#ffb4ab", "primary-container": "#39ff14", "secondary-fixed-dim": "#c8c5cb", "inverse-primary": "#106e00" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xl": "2rem", "gutter-mobile": "0.75rem", "gutter": "1rem", "margin": "1.25rem" }, fontFamily: { "label-sm": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "label-md": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "display-lg": ["Inter"] }, fontSize: { "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-lg": ["28px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "-0.01em", fontWeight: "500" }], "label-lg": ["14px", { lineHeight: "18px", letterSpacing: "-0.02em", fontWeight: "500" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "600" }], "display-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Bitstream Icon Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VSrJABB2iocbLm4ICDUEOFXEpz3TvPeepgplZQjFdV6hgnvUZvZi-oypxKJRxXMN6N-_c1G9jOZRq4gXvFqaB4VAeIwk6MlFe8nTJSRWJ9q7heIaepoW5jCkVQoYtwAWQtHP5y2rDnA3p6AcpCdpTWV551jLA1Ulx-jihSA0KL_OPHGd2ka7s2CIaP_XlqbDJhWjoM5ZkED6480MFfIdZTMUA1pk8k9UC_EnW7XRii"/><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">Bitstream<span class="text-primary-container">.fm</span></span><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container shadow-[0_0_8px_#39ff14]"></span></span></div><span class="px-1.5 py-0.5 rounded-full bg-primary-container/10 text-primary-container font-label-sm text-label-sm uppercase tracking-wider">DEMO</span></div><div class="flex items-center gap-space-sm"><span class="hidden">Discover</span><a aria-label="Settings" class="w-11 h-11 flex items-center justify-center rounded-full text-secondary hover:text-primary-container transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-2xl">settings</span></a><a aria-label="Profile" class="w-11 h-11 flex items-center justify-center rounded-full transition-transform active:scale-95" data-path="library" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWp2o29NN7IQnNj5YY6Df8k3iDpvZy_J6VoMqhNgrYrVod0MkOkDMGUm9aK1Vrxot7FTD9CQdtteu6M6FwUWVKCVC9xMnoO9YsYe5bXKCsW-ikX5S3HM3IWFRkCXs_saSJRTbscsLgWv2czc30iGl87VH6nnzxadslTgCSTHwsCjkB2jP0mOnKzGjd9tbVyOqI2ZXnUajuhaSTHU-YEKFJViVHELsd3OpMDC7oAnc"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-6 gap-space-lg">
+<!-- Search & Filter Controls -->
+<section class="flex flex-col gap-space-sm pt-space-xs">
+<div class="relative flex items-center w-full">
+<div class="absolute left-3.5 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-12 pl-10 pr-20 bg-surface-container rounded-lg text-on-surface placeholder:text-secondary text-body-md font-body-md shadow-sm transition-all focus:outline-none focus:bg-surface-container-high" id="discover-search-input" placeholder="Search 6 network shows, 1,200+ episodes..." type="text"/>
+<div class="absolute right-2 flex items-center gap-1">
+<button aria-label="Voice Search" class="w-8 h-8 rounded-full flex items-center justify-center text-secondary hover:text-primary-container active:scale-95 transition-all" id="mic-search-btn">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+<button aria-label="Filters" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary hover:text-primary active:scale-95 transition-all shadow-sm" id="tuning-filter-btn">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Genre / Topic Horizontal Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<button class="filter-chip px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-fixed font-label-md text-label-md tracking-tight whitespace-nowrap shadow-[0_0_12px_rgba(57,255,20,0.25)] flex items-center gap-1.5 transition-transform active:scale-95">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-fixed"></span>
+        All
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-tight whitespace-nowrap transition-transform active:scale-95">
+        Tech
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-tight whitespace-nowrap transition-transform active:scale-95">
+        AI
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-tight whitespace-nowrap transition-transform active:scale-95">
+        Crypto
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-tight whitespace-nowrap transition-transform active:scale-95">
+        Hip-Hop
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-tight whitespace-nowrap transition-transform active:scale-95">
+        News
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-tight whitespace-nowrap flex items-center gap-1 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[13px] text-primary-container">bolt</span>
+        Shorts (&lt;5m)
+      </button>
+</div>
+</section>
+<!-- Live Audio Waveform Ticker Banner -->
+<section class="w-full bg-surface-container-low rounded-xl p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="flex items-end gap-[2px] h-4 w-5 shrink-0 px-0.5">
+<span class="w-[3px] bg-primary-container rounded-full animate-pulse h-3"></span>
+<span class="w-[3px] bg-primary-container rounded-full animate-bounce h-4"></span>
+<span class="w-[3px] bg-primary-container rounded-full animate-pulse h-2"></span>
+<span class="w-[3px] bg-primary-container rounded-full animate-bounce h-3.5"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest">LIVE STREAM SYNC</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[9px]">DEMO</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate">Synthesizing 6 feeds into bitstream micro-segments</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container shrink-0 font-bold tracking-tight">48 kHz</span>
+</section>
+<!-- Featured Network Shows (2-column tactile grid) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Featured Network Shows</h2>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">6 SHOWS</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline tracking-wider">INDEX: 01-06</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm w-full">
+<!-- Show 1: W For News in the Chat -->
+<article class="group relative bg-surface-container rounded-xl p-3 flex flex-col justify-between gap-3 shadow-md hover:bg-surface-container-high transition-colors active:scale-[0.98]">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Editorial graphic design of an underground media studio with glowing neon cyan monitors, broadcast equipment, sleek dark surfaces, cinematic atmospheric studio haze with neon green LED status tally indicators, ultra high resolution album artwork aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4VpSp9Ewf4vZqHBOgNmSaD8FQECyPWaadKqBdjpafZzUExBs6DLK5Lk39eJ-A9rcpyiEKFuZljD0354wno-uL7PGWYVDkyjNCx6v_2-4_578CrC7tNbMIzjBFZHa4V0_-eBdo3yvvpCrEOEn7DP8F8Xj6LzBb9x6xH-6K8UvX3iPC6XLP2cPmNKc3GqjUwTZWJKT8Y-QperI1K0zVEjpqwFxYgfIVI3sNlsI9B0U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-full shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-error font-bold">LIVE</span>
+</div>
+<div class="absolute bottom-1.5 left-2 right-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hourly News</span>
+<span class="font-label-sm text-label-sm text-primary-container font-mono">DEMO</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-[15px] leading-tight text-on-surface font-semibold group-hover:text-primary transition-colors line-clamp-1">W For News in the Chat</h3>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">Breaking internet culture &amp; policy wire</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline">Hourly Update</span>
+<button aria-label="Play show" class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+</div>
+</article>
+<!-- Show 2: Bitstream -->
+<article class="group relative bg-surface-container rounded-xl p-3 flex flex-col justify-between gap-3 shadow-md hover:bg-surface-container-high transition-colors active:scale-[0.98]">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Futuristic audio workstation synth patch bay with illuminated patch cables glowing in bright electric green and pure pitch black chassis, tactile mechanical encoders, modular digital interface, sharp focal depth and moody technical studio atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBQ_wthWk2Ug22uDBK6NlxqWdEiNIZRr5KazrGoRKZ_afCSzajWeT6Tq6Q5bImzHntqjWdbQh4-5bOneQ3oJdiZfAy_BucP_zgzqQA_1I-ixlPTiOk8e6SDYhiYH9bOTY14NybhZOp_-wyclfS531qQw0s_tsOC2xxsqrYM_NxH6fi5CD-JfHRZ0uccXfg831vWKzXRCHhz-hU8XsuCqM36wP5zHmMgFromFMGjiY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 bg-primary-container/15 backdrop-blur-md px-1.5 py-0.5 rounded-full shadow-sm">
+<span class="font-label-sm text-label-sm text-primary-container font-bold">FLAGSHIP</span>
+</div>
+<div class="absolute bottom-1.5 left-2 right-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Daily Tech</span>
+<span class="font-label-sm text-label-sm text-primary-container font-mono">DEMO</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-[15px] leading-tight text-on-surface font-semibold group-hover:text-primary transition-colors line-clamp-1">Bitstream</h3>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">System architecture &amp; high leverage tools</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline">35k Listeners</span>
+<button aria-label="Play show" class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+</div>
+</article>
+<!-- Show 3: Everyday AI -->
+<article class="group relative bg-surface-container rounded-xl p-3 flex flex-col justify-between gap-3 shadow-md hover:bg-surface-container-high transition-colors active:scale-[0.98]">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Abstract computational intelligence neural cluster visualization, crystalline filaments pulsating with electric green energy nodes on solid obsidian glass base, minimalist technical typography accent, studio render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW3y0-2w6VKbjBuTNj8D1efozRdJ_tLAj62rljySrAMZX850UrcTQXGxbUlNhKSoa3HohTJx_WcrpSI9Duk4bJL79uFjfTAdx2QK42yRmIjct__dIHgFrWDyb1ML3IWYs8p69diQHXqJoWlyND8XyM7TfNH5u33MvbpyOBQW23pjUvenYM3DY8VKXWE_2EDLS9hgwHV-b-bXq_q9h0zdt46m5KOX_mXsmaSNwO4hI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-full shadow-sm">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim font-bold">HOT</span>
+</div>
+<div class="absolute bottom-1.5 left-2 right-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Daily AI</span>
+<span class="font-label-sm text-label-sm text-primary-container font-mono">DEMO</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-[15px] leading-tight text-on-surface font-semibold group-hover:text-primary transition-colors line-clamp-1">Everyday AI</h3>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">Models, agents, weights and real workflows</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline">Daily Drop</span>
+<button aria-label="Play show" class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+</div>
+</article>
+<!-- Show 4: AI Money -->
+<article class="group relative bg-surface-container rounded-xl p-3 flex flex-col justify-between gap-3 shadow-md hover:bg-surface-container-high transition-colors active:scale-[0.98]">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Algorithmic trading terminal candlestick charts bathed in monochrome black and radioactive chartreuse green indicators, sharp isometric perspective, high end financial technology software interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyk_VuMjH68ykyqi8ewmo2G6kpfgCB3gMFot0mjbEROMY_nvtYgxok4LNowLJQvW7KQbWak2EOVhsBzimg-d1HAs4W1XgAqWItriYWrdIOwvWIrX48uZQ1RTNz0RnypagIcEh3wycx-jHw_UA0LmOhrlpwQVpTfZ3r4QcEnpg1SWdEykA10ACPDIxqnn5Ml2YHVkKLTtsUHDVM3E5M8k3c1TgYq_-1EVSqNGXWMHE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-full shadow-sm">
+<span class="font-label-sm text-label-sm text-primary-container font-bold">TRENDING</span>
+</div>
+<div class="absolute bottom-1.5 left-2 right-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">AI Business</span>
+<span class="font-label-sm text-label-sm text-primary-container font-mono">DEMO</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-[15px] leading-tight text-on-surface font-semibold group-hover:text-primary transition-colors line-clamp-1">AI Money</h3>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">Monetization, SaaS moats &amp; venture flow</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline">Bi-Weekly</span>
+<button aria-label="Play show" class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+</div>
+</article>
+<!-- Show 5: Bar Exam -->
+<article class="group relative bg-surface-container rounded-xl p-3 flex flex-col justify-between gap-3 shadow-md hover:bg-surface-container-high transition-colors active:scale-[0.98]">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Vintage boombox cassette tape deck crossfader reimagined in sleek matte dark carbon fiber with luminous neon green LED VU meters peaking high, urban rap recording studio lighting mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSkZjE64VLTw88kvTF9NyXAVtG5HzPJpwhgAqu-DITU_pvS_sevO01JIFjz7SdBHnfiSrpXYo-VF3xuqj1WJqqCdDP9R4VKIcqsrFYf8TBQxIUhrjCwb9mPD8D5Gu3LpqStCpm7trnmQ46Xt5-B8iqxrxjIYZpzWp208PSyYtZS7JUEkfqe5G6TzfkzUjx2Iw6NmWXO9clRx69L9jZER9o1oqpuMDdmVXCfasrPZY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-full shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold">CULTURE</span>
+</div>
+<div class="absolute bottom-1.5 left-2 right-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hip-Hop News</span>
+<span class="font-label-sm text-label-sm text-primary-container font-mono">DEMO</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-[15px] leading-tight text-on-surface font-semibold group-hover:text-primary transition-colors line-clamp-1">Bar Exam</h3>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">Lyrical forensics, label deals &amp; beefs</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline">Weekly</span>
+<button aria-label="Play show" class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+</div>
+</article>
+<!-- Show 6: Block by Block -->
+<article class="group relative bg-surface-container rounded-xl p-3 flex flex-col justify-between gap-3 shadow-md hover:bg-surface-container-high transition-colors active:scale-[0.98]">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Dark cryptographic decentralized blockchain blocks rendered as 3D obsidian geometric cubes with internal neon green matrix traces floating in vacuum zero gravity, crisp cinematic rendering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwkc3Yy0nK60H_NmwxNCetOL9jLG4qNbQGHe8r9XFkvv122ILzRYnzMHprr8o9wnHDEM0yzd7V_VBd0RTxwYRd77EpyhcEwZFQRuOiMSCooLNwUzs010Y793b1ds_7ZO9qTeYVyyavfYTvTjZigbqnk-AI9DsIMqWCz1Qoqb9Zsp-GLKQzLlQq-NkxlwuGohIJD7Igug5b4F9zE_4n4B4qIkFleW4RqfNQWb8G_Rw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-full shadow-sm">
+<span class="font-label-sm text-label-sm text-primary-container font-bold">MARKET</span>
+</div>
+<div class="absolute bottom-1.5 left-2 right-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Crypto 3x Daily</span>
+<span class="font-label-sm text-label-sm text-primary-container font-mono">DEMO</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-[15px] leading-tight text-on-surface font-semibold group-hover:text-primary transition-colors line-clamp-1">Block by Block</h3>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">On-chain forensics, L2 shifts &amp; liquidity</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline">3x Daily</span>
+<button aria-label="Play show" class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Trending Episodes Today (#1 to #5 Ranked) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Trending Episodes Today</h2>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-container/10 text-primary-container font-label-sm text-label-sm">TOP 5</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">24H VELOCITY</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Episode #1 -->
+<article class="episode-row group relative bg-surface-container rounded-xl p-3 flex items-center gap-3 shadow-md hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer">
+<div class="flex items-center justify-center w-7 shrink-0">
+<span class="font-display-lg text-[28px] leading-none text-primary-container font-black tracking-tighter drop-shadow-[0_0_8px_rgba(57,255,20,0.3)]">01</span>
+</div>
+<div class="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close up dark broadcast microphone capsule with green ring LED illuminate, sound studio acoustic foam background, high detail audio podcast art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk8BxILUDikhTjEuZGGMRqo60DKJjTHNv-VVFPZlMtkKAm6Ihn8_PETnLb6g92T25XyFKZF8KpVeziGLwged7Bk9idZkS9Wq-EmOkWwTmLUgFuYg67nwYnArguyPjyFVeRHyHT5blhEUI6kCtvxBdgavcglcxB50VgAUyRXrpYbZeCryWxJpGKDRL6cvqp4hC42hDye56jU-nEbXNu6ne1CXlz4BdXFBnwFSYaJRY"/>
+<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container text-xl">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-[11px] text-secondary font-medium truncate">W For News in the Chat</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[8px] uppercase">DEMO</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold truncate group-hover:text-primary transition-colors">
+            Trump's Nobel Pitch, Paxton Leaked Audio
+          </h4>
+<div class="flex items-center gap-2 pt-0.5">
+<span class="font-label-sm text-label-sm text-primary-container font-mono">5m</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-highest"></span>
+<span class="font-label-sm text-label-sm text-outline font-mono">42.1k plays</span>
+</div>
+</div>
+<!-- Waveform Visualizer Micro-Bars -->
+<div class="flex items-center gap-[2px] h-6 px-1.5 shrink-0">
+<span class="w-[2px] h-3 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-5 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-2 bg-outline rounded-full"></span>
+<span class="w-[2px] h-4 bg-outline rounded-full"></span>
+</div>
+</article>
+<!-- Episode #2 -->
+<article class="episode-row group relative bg-surface-container rounded-xl p-3 flex items-center gap-3 shadow-md hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer">
+<div class="flex items-center justify-center w-7 shrink-0">
+<span class="font-display-lg text-[28px] leading-none text-primary-container font-black tracking-tighter drop-shadow-[0_0_8px_rgba(57,255,20,0.3)]">02</span>
+</div>
+<div class="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Geometric generative wireframe structure glowing neon green in a void of matte black darkness, algorithmic concept art, pristine digital minimalism" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSRKX2Qx4rM026hMDNEtHpJYhuv7Y-1LsHHgfxoZqzmqkwh-_--iaq_515uGX7WliICx8uk6KWxxHk7BEEc5K_-eu2dXg3O9WGClWTzT7R4CMzzkb4MDJAwMQEojhVM7J8IlRGvkb-GOIuuIwyLe5fJTdaOJplPN0SD9XkT0uU6bdcyBBEnJPyP0vHoLf2PMrPCJfMZ2BMmPe2Sb8CSXm_v4A-OTewo1iWXQt9nwQ"/>
+<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container text-xl">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-[11px] text-secondary font-medium truncate">AI Money</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[8px] uppercase">DEMO</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold truncate group-hover:text-primary transition-colors">
+            AI Agents That Actually Make Money
+          </h4>
+<div class="flex items-center gap-2 pt-0.5">
+<span class="font-label-sm text-label-sm text-primary-container font-mono">18m</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-highest"></span>
+<span class="font-label-sm text-label-sm text-outline font-mono">38.4k plays</span>
+</div>
+</div>
+<div class="flex items-center gap-[2px] h-6 px-1.5 shrink-0">
+<span class="w-[2px] h-2 bg-outline rounded-full"></span>
+<span class="w-[2px] h-4 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-6 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-3 bg-outline rounded-full"></span>
+</div>
+</article>
+<!-- Episode #3 -->
+<article class="episode-row group relative bg-surface-container rounded-xl p-3 flex items-center gap-3 shadow-md hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer">
+<div class="flex items-center justify-center w-7 shrink-0">
+<span class="font-display-lg text-[28px] leading-none text-primary-container font-black tracking-tighter drop-shadow-[0_0_8px_rgba(57,255,20,0.3)]">03</span>
+</div>
+<div class="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Digital node cluster network visualization in high-frequency trading speed, green laser pathways connecting black monoliths, crypto terminal UI wallpaper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw5yLqbHjjVuAlizGhyKhPekIT5wRwD03hQhX4seIY4zRQ7ohgVApk4x5jvIHp8Ca2-oMsQP3PiRahQCLDaP3JDwHHWS-FkW3_bUCbmLoDbWsDze9FCGHfjOugCMdWDMn8GWFDCPjjK7phk_exI8XH8bQb4sZgZxajOzqGipdF8OId8Tf1g_LNqrXqmtm8CuB28LcD5Q97tmSz_xDt7_vvg9R8xMfY68MBA0TnXVM"/>
+<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container text-xl">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-[11px] text-secondary font-medium truncate">Block by Block</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[8px] uppercase">DEMO</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold truncate group-hover:text-primary transition-colors">
+            Solana Breakpoint Alpha &amp; L2 Gas Drops
+          </h4>
+<div class="flex items-center gap-2 pt-0.5">
+<span class="font-label-sm text-label-sm text-primary-container font-mono">12m</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-highest"></span>
+<span class="font-label-sm text-label-sm text-outline font-mono">29.5k plays</span>
+</div>
+</div>
+<div class="flex items-center gap-[2px] h-6 px-1.5 shrink-0">
+<span class="w-[2px] h-3 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-3 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-4 bg-outline rounded-full"></span>
+<span class="w-[2px] h-2 bg-outline rounded-full"></span>
+</div>
+</article>
+<!-- Episode #4 -->
+<article class="episode-row group relative bg-surface-container rounded-xl p-3 flex items-center gap-3 shadow-md hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer">
+<div class="flex items-center justify-center w-7 shrink-0">
+<span class="font-display-lg text-[28px] leading-none text-primary-container font-black tracking-tighter drop-shadow-[0_0_8px_rgba(57,255,20,0.3)]">04</span>
+</div>
+<div class="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Turntable vinyl tone arm resting on ultra black polycarbonate vinyl with lime green illuminated stylus needle light, luxury sound equipment macro photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwOqjx5q4YMSUQgDU2yd5HPOlTmeiEbwj7FDbqcxZDCbld8Uqmc06P1TW-ImU6H2XuPDQ2b_VaZPhUxTfRQ7bo4tFky_-efLJvE1dp4oqHYMCO71AxxZ_NGm9HR8PHW69okVBLyMzBWB7ZqYYQPNxq0QBKmIIbgj1aqvUN4ZGgDtVt7Tf-S48wfgCWnHzBdCtBEgACm3c5S18GGkdk77JAz2BYhGy404XktOj_o74"/>
+<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container text-xl">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-[11px] text-secondary font-medium truncate">Bar Exam</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[8px] uppercase">DEMO</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold truncate group-hover:text-primary transition-colors">
+            Drake, Kendrick &amp; The New Streaming Splits
+          </h4>
+<div class="flex items-center gap-2 pt-0.5">
+<span class="font-label-sm text-label-sm text-primary-container font-mono">31m</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-highest"></span>
+<span class="font-label-sm text-label-sm text-outline font-mono">25.8k plays</span>
+</div>
+</div>
+<div class="flex items-center gap-[2px] h-6 px-1.5 shrink-0">
+<span class="w-[2px] h-4 bg-outline rounded-full"></span>
+<span class="w-[2px] h-5 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-2 bg-outline rounded-full"></span>
+<span class="w-[2px] h-1 bg-outline rounded-full"></span>
+</div>
+</article>
+<!-- Episode #5 -->
+<article class="episode-row group relative bg-surface-container rounded-xl p-3 flex items-center gap-3 shadow-md hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer">
+<div class="flex items-center justify-center w-7 shrink-0">
+<span class="font-display-lg text-[28px] leading-none text-primary-container font-black tracking-tighter drop-shadow-[0_0_8px_rgba(57,255,20,0.3)]">05</span>
+</div>
+<div class="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Code editor terminal displaying synthetic token streams and green syntax highlights against deep pitch midnight canvas, cybernetic coding station vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe-j_kaGQLRw0uBTbD_2mW6ousXg8sIh4XwCVhyjh-ml-9g3JDa7IV6QmzPJ9T_NHr4LfPSQPhY6kE-MxaGqTuFDgfDRo8A1kRLDyUuYI3Au8l682tuI60Ml1KZgPoHrxU-o02BNvdvdrH02vjmBDYEaVicoL2_hXHQizmucGWGVBC0aibGW6JT7llgm54JoemzCuodH-uR1vbdXErGkPjDfhfv7oSgrGRgxxW3NA"/>
+<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container text-xl">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-[11px] text-secondary font-medium truncate">Everyday AI</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[8px] uppercase">DEMO</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold truncate group-hover:text-primary transition-colors">
+            Autonomous Coding Models Ranked
+          </h4>
+<div class="flex items-center gap-2 pt-0.5">
+<span class="font-label-sm text-label-sm text-primary-container font-mono">16m</span>
+<span class="w-1 h-1 rounded-full bg-surface-container-highest"></span>
+<span class="font-label-sm text-label-sm text-outline font-mono">21.0k plays</span>
+</div>
+</div>
+<div class="flex items-center gap-[2px] h-6 px-1.5 shrink-0">
+<span class="w-[2px] h-2 bg-outline rounded-full"></span>
+<span class="w-[2px] h-3 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-3 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-1 bg-outline rounded-full"></span>
+</div>
+</article>
+</div>
+</section>
+<!-- Curated Playlists (Horizontal Interactive Cards) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Curated Playlists</h2>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">EDITORIAL</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">[DEMO SET]</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm w-full">
+<!-- Playlist 1: Under 10 Minutes: Morning Commute -->
+<article class="relative bg-surface-container rounded-xl p-4 flex items-center justify-between gap-4 shadow-md overflow-hidden hover:bg-surface-container-high transition-colors active:scale-[0.99] cursor-pointer">
+<div class="flex items-center gap-3.5 min-w-0">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 shadow-sm relative overflow-hidden">
+<span class="material-symbols-outlined text-primary-container text-2xl">commute</span>
+<div class="absolute bottom-0 inset-x-0 h-1 bg-primary-container"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-semibold">Speed Queue</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[8px]">DEMO</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Under 10 Minutes: Morning Commute</h3>
+<p class="font-body-sm text-body-sm text-secondary truncate">Condensed tech &amp; market briefings tailored for train rides</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 shrink-0">
+<span class="font-label-sm text-label-sm text-outline font-mono">8 tracks</span>
+<button aria-label="Play Playlist" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center shadow-[0_0_10px_rgba(57,255,20,0.3)] hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</article>
+<!-- Playlist 2: Silicon Valley Insider Leak Pack -->
+<article class="relative bg-surface-container rounded-xl p-4 flex items-center justify-between gap-4 shadow-md overflow-hidden hover:bg-surface-container-high transition-colors active:scale-[0.99] cursor-pointer">
+<div class="flex items-center gap-3.5 min-w-0">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 shadow-sm relative overflow-hidden">
+<span class="material-symbols-outlined text-primary-container text-2xl">lock_open_right</span>
+<div class="absolute bottom-0 inset-x-0 h-1 bg-primary-container"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-semibold">Underground Tape</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[8px]">DEMO</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Silicon Valley Insider Leak Pack</h3>
+<p class="font-body-sm text-body-sm text-secondary truncate">Private memo transcripts, founder calls &amp; stealth leaks</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 shrink-0">
+<span class="font-label-sm text-label-sm text-outline font-mono">5 tracks</span>
+<button aria-label="Play Playlist" class="w-8 h-8 rounded-full bg-surface-container-highest text-primary-container hover:bg-primary-container hover:text-on-primary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</article>
+<!-- Playlist 3: Weekend Deep Dives -->
+<article class="relative bg-surface-container rounded-xl p-4 flex items-center justify-between gap-4 shadow-md overflow-hidden hover:bg-surface-container-high transition-colors active:scale-[0.99] cursor-pointer">
+<div class="flex items-center gap-3.5 min-w-0">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 shadow-sm relative overflow-hidden">
+<span class="material-symbols-outlined text-primary-container text-2xl">headphones</span>
+<div class="absolute bottom-0 inset-x-0 h-1 bg-primary-container"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-semibold">Longform Audio</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[8px]">DEMO</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Weekend Deep Dives</h3>
+<p class="font-body-sm text-body-sm text-secondary truncate">Uninterrupted 45m+ architectural breakdowns and interviews</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 shrink-0">
+<span class="font-label-sm text-label-sm text-outline font-mono">11 tracks</span>
+<button aria-label="Play Playlist" class="w-8 h-8 rounded-full bg-surface-container-highest text-primary-container hover:bg-primary-container hover:text-on-primary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Interactive Mini Player Bar Anchor (Fixed Ergonomic Thumb-Zone) -->
+<aside class="sticky bottom-0 z-30 -mx-margin px-margin pt-2 pb-1 bg-surface-container-lowest/90 backdrop-blur-xl shadow-lg">
+<div class="bg-surface-container rounded-xl p-2.5 flex items-center justify-between gap-3 shadow-md">
+<div class="flex items-center gap-2.5 min-w-0 flex-1">
+<div class="w-10 h-10 rounded-lg overflow-hidden shrink-0 bg-surface-container-highest relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Monochrome studio micro-artwork of green oscilloscopes for current audio stream, sleek player thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmadumyVppWs2OooHBjdK8J3CAhP0d-ZcKN3ziNwVldrOP_QDC369piIYnizxX9d0veKAGYWWgBn5HdiGKaJoFowc1scVFxEEnWyqrjz6As5t8BrR2xQ_4zSsQITHXsXNVj8kMwssfiNi4ZwyLdBGlQSOx2wZg7eH_igVpUWk1pAVv250W9zaxymbSzGsWlwIsSXQOwppEmC21__xLGhP8QK_rJ8i7OsjVArOBh04"/>
+<div class="absolute bottom-0.5 right-0.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_4px_#39ff14]"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[13px] leading-tight text-on-surface font-semibold truncate">Trump's Nobel Pitch, Paxton Leaked Audio</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-primary-container font-label-sm text-[8px] font-bold shrink-0">DEMO</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-[11px] text-secondary truncate">W For News in the Chat</span>
+<span class="font-label-sm text-[10px] text-primary-container font-mono">03:14 / 05:00</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Rewind 15 seconds" class="w-9 h-9 rounded-full flex items-center justify-center text-secondary hover:text-on-surface active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">replay_10</span>
+</button>
+<button aria-label="Play or Pause" class="w-10 h-10 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center shadow-[0_0_12px_rgba(57,255,20,0.35)] active:scale-90 transition-transform" id="mini-play-toggle">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+<script>
+  // Simple client-side micro-interactions for chip switching and feedback
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.filter-chip').forEach(c => {
+        c.className = 'filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-tight whitespace-nowrap transition-transform active:scale-95';
+        const dot = c.querySelector('span.rounded-full');
+        if (dot) dot.remove();
+      });
+      chip.className = 'filter-chip px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-fixed font-label-md text-label-md tracking-tight whitespace-nowrap shadow-[0_0_12px_rgba(57,255,20,0.25)] flex items-center gap-1.5 transition-transform active:scale-95';
+      if (!chip.querySelector('span.rounded-full')) {
+        const activeDot = document.createElement('span');
+        activeDot.className = 'w-1.5 h-1.5 rounded-full bg-on-primary-fixed';
+        chip.prepend(activeDot);
+      }
+    });
+  });
+
+  // Mini player button play/pause toggle micro-interaction
+  const playBtn = document.getElementById('mini-play-toggle');
+  if (playBtn) {
+    playBtn.addEventListener('click', () => {
+      const icon = playBtn.querySelector('.material-symbols-outlined');
+      if (icon.innerText === 'pause') {
+        icon.innerText = 'play_arrow';
+      } else {
+        icon.innerText = 'pause';
+      }
+    });
+  }
+
+  // Row selection interaction highlight
+  document.querySelectorAll('.episode-row').forEach(row => {
+    row.addEventListener('click', () => {
+      document.querySelectorAll('.episode-row').forEach(r => r.classList.remove('bg-surface-container-high', 'shadow-[0_0_16px_rgba(57,255,20,0.15)]'));
+      row.classList.add('bg-surface-container-high', 'shadow-[0_0_16px_rgba(57,255,20,0.15)]');
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-2xl shadow-[0_-2px_16px_rgba(0,0,0,0.6)]" data-active-classes="text-primary-container [&amp;_.nav-indicator]:opacity-100 [&amp;_.nav-indicator]:scale-100"><div class="flex items-center justify-around h-16 px-space-xs"><a class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-primary transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">home</span><span class="font-label-sm text-label-sm mt-0.5">Home</span><span class="nav-indicator absolute bottom-0.5 w-1 h-1 rounded-full bg-primary-container opacity-0 scale-50 transition-all shadow-[0_0_6px_#39ff14]"></span></a><a aria-current="page" class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 transition-colors text-primary-container [&amp;_.nav-indicator]:opacity-100 [&amp;_.nav-indicator]:scale-100" data-path="discover" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">explore</span><span class="font-label-sm text-label-sm mt-0.5">Discover</span><span class="nav-indicator absolute bottom-0.5 w-1 h-1 rounded-full bg-primary-container opacity-0 scale-50 transition-all shadow-[0_0_6px_#39ff14]"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-primary transition-colors" data-path="clips" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">movie</span><span class="absolute -top-1 -right-3.5 px-1 py-0.2 rounded-full bg-primary-container text-on-primary-fixed font-label-sm text-[8px] leading-none uppercase font-bold">NEW</span></div><span class="font-label-sm text-label-sm mt-0.5">Clips</span><span class="nav-indicator absolute bottom-0.5 w-1 h-1 rounded-full bg-primary-container opacity-0 scale-50 transition-all shadow-[0_0_6px_#39ff14]"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-primary transition-colors" data-path="library" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">video_library</span><span class="font-label-sm text-label-sm mt-0.5">Library</span><span class="nav-indicator absolute bottom-0.5 w-1 h-1 rounded-full bg-primary-container opacity-0 scale-50 transition-all shadow-[0_0_6px_#39ff14]"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 text-secondary hover:text-primary transition-colors" data-path="shop" href="#"><span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-105">shopping_bag</span><span class="font-label-sm text-label-sm mt-0.5">Shop</span><span class="nav-indicator absolute bottom-0.5 w-1 h-1 rounded-full bg-primary-container opacity-0 scale-50 transition-all shadow-[0_0_6px_#39ff14]"></span></a></div></nav></body></html>
